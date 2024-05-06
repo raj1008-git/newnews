@@ -54,26 +54,58 @@ class AuthenticationScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  labelText: 'Enter Name',
-                ),
-              ),
-              const TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  labelText: 'Password',
-                ),
-              ),
-              const TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  labelText: 'Confirm Password',
-                ),
-              ),
-              const SizedBox(
-                height: 40,
+              Container(
+                child: loginStatus
+                    ? const Column(
+                        children: [
+                          TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              labelText: 'Enter Name',
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              labelText: 'Enter Email',
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              labelText: 'Password',
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              labelText: 'Confirm Password',
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                        ],
+                      )
+                    : const Column(
+                        children: [
+                          TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              labelText: 'Enter Email',
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              labelText: 'Password',
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                        ],
+                      ),
               ),
               MaterialButton(
                 onPressed: loginStatus ? () {} : () {},
