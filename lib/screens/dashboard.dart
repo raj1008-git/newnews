@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:news/screens/AuthenticationScreen.dart';
+import 'package:news/screens/authentication_screen.dart';
 
 import 'home_page.dart';
 
